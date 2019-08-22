@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class JumpingGameCollectable : MonoBehaviour {
 
-    [SerializeField]
-    public int Value;
-
+    
     private CollectAcorn acorn;
 
     void Start()
@@ -16,16 +14,17 @@ public class JumpingGameCollectable : MonoBehaviour {
 
     public void OnCollected()
     {
-        MeshRenderer myMesh;
-        SphereCollider myCollider;
+        SpriteRenderer mySprite;
+        CircleCollider2D myCollider;
 
-        myMesh = GetComponent<MeshRenderer>();
-        myCollider = GetComponent<SphereCollider>();
+        mySprite = GetComponent<SpriteRenderer>();
+        myCollider = GetComponent<CircleCollider2D>();
 
-        myMesh.enabled = false;
+        mySprite.enabled = false;
         myCollider.enabled = false;
 
-        acorn.CollectableAnimation(transform.position);
+        if (acorn)
+            acorn.CollectableAnimation(transform.position);
     }
     
 }

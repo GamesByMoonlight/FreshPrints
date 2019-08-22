@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8752531330826536135}
   - component: {fileID: 6492724481254336974}
+  - component: {fileID: 4505092143424642276}
+  - component: {fileID: 2702350176795228492}
   m_Layer: 0
   m_Name: Acorn
   m_TagString: Untagged
@@ -80,3 +82,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4505092143424642276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074632393411325069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af16ae46be64c043844b0dacd66a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2702350176795228492
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074632393411325069}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1

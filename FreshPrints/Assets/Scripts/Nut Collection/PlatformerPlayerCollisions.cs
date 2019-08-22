@@ -24,12 +24,11 @@ public class PlatformerPlayerCollisions : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.GetComponent<JumpingGameCollectable>())
         {
             var collectable = col.gameObject.GetComponent<JumpingGameCollectable>();
-            GameEventSystem.OnScoreAdded(collectable.Value);
             collectable.OnCollected();
         }
     }
