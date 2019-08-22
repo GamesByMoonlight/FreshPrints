@@ -57,14 +57,14 @@ public class ScoreboardManager : MonoBehaviour {
     #region Subscribe to events
     void OnEnable()
     {
-        JumpingGameEventSystem.ScoreAdded += AddScore;
-        JumpingGameEventSystem.LevelReset += ResetScore;
+        GameEventSystem.ScoreAdded += AddScore;
+        GameEventSystem.LevelReset += ResetScore;
     }
 
     void OnDisable()
     {
-        JumpingGameEventSystem.ScoreAdded -= AddScore;
-        JumpingGameEventSystem.LevelReset -= ResetScore;
+        GameEventSystem.ScoreAdded -= AddScore;
+        GameEventSystem.LevelReset -= ResetScore;
     }
     #endregion
 

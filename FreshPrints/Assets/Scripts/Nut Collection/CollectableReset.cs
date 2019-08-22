@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// Class to take all childed objects and reset their colliders and meshes when JumpingGameEventSystem.LevelReset is called
+// Class to take all childed objects and reset their colliders and meshes when GameEventSystem.LevelReset is called
 public class CollectableReset : MonoBehaviour {
     
 
@@ -28,12 +28,12 @@ public class CollectableReset : MonoBehaviour {
     #region Event System Subscribing
     void OnEnable()
     {
-        JumpingGameEventSystem.LevelReset += ResetCollectables;
+        GameEventSystem.LevelReset += ResetCollectables;
     }
 
     void OnDisable()
     {
-        JumpingGameEventSystem.LevelReset -= ResetCollectables;
+        GameEventSystem.LevelReset -= ResetCollectables;
     }
 
     #endregion

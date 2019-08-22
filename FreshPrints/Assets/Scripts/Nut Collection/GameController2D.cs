@@ -109,7 +109,7 @@ public class GameController2D : MonoBehaviour {
     {
         yield return new WaitForSeconds(1f);
 
-        JumpingGameEventSystem.OnPlayerFail();  // This causes the player to stop moving
+        GameEventSystem.OnPlayerFail();  // This causes the player to stop moving
 
         if (didIWin)
         {
@@ -125,10 +125,10 @@ public class GameController2D : MonoBehaviour {
     {
         JumpResetCollider.GroundTouched += ResetJump;
         JumpResetCollider.CantJump += CancelJump;
-        JumpingGameEventSystem.BeginPlay += AllowInput;
-        JumpingGameEventSystem.PlayerFail += PauseInput;
-        JumpingGameEventSystem.EndLevel += AnimatePlayerResults;
-        JumpingGameEventSystem.LevelReset += ResetPlayer;
+        GameEventSystem.BeginPlay += AllowInput;
+        GameEventSystem.PlayerFail += PauseInput;
+        GameEventSystem.EndLevel += AnimatePlayerResults;
+        GameEventSystem.LevelReset += ResetPlayer;
         
     }
 
@@ -136,9 +136,9 @@ public class GameController2D : MonoBehaviour {
     {
         JumpResetCollider.GroundTouched -= ResetJump;
         JumpResetCollider.CantJump -= CancelJump;
-        JumpingGameEventSystem.BeginPlay -= AllowInput;
-        JumpingGameEventSystem.PlayerFail -= PauseInput;
-        JumpingGameEventSystem.EndLevel -= AnimatePlayerResults;
-        JumpingGameEventSystem.LevelReset -= ResetPlayer;
+        GameEventSystem.BeginPlay -= AllowInput;
+        GameEventSystem.PlayerFail -= PauseInput;
+        GameEventSystem.EndLevel -= AnimatePlayerResults;
+        GameEventSystem.LevelReset -= ResetPlayer;
     }
 }

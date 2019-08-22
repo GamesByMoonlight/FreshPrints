@@ -29,7 +29,7 @@ public class PlatformerPlayerCollisions : MonoBehaviour {
         if (col.gameObject.GetComponent<JumpingGameCollectable>())
         {
             var collectable = col.gameObject.GetComponent<JumpingGameCollectable>();
-            JumpingGameEventSystem.OnScoreAdded(collectable.Value);
+            GameEventSystem.OnScoreAdded(collectable.Value);
             collectable.OnCollected();
         }
     }
@@ -44,22 +44,22 @@ public class PlatformerPlayerCollisions : MonoBehaviour {
 
     IEnumerator PlayerDie()
     {
-        JumpingGameEventSystem.OnPlayerFail();  // Stops inputs, etc
+        GameEventSystem.OnPlayerFail();  // Stops inputs, etc
         
         // Some sort of player death animation
         yield return new WaitForSeconds(2);  // Replace "2" with length of player death animation/sfx
 
-        JumpingGameEventSystem.OnLevelReset();
+        GameEventSystem.OnLevelReset();
     }
 
     void OnEnable()
     {
-        JumpingGameEventSystem.LevelReset += ResetCollisions;
+        GameEventSystem.LevelReset += ResetCollisions;
     }
 
     void OnDisable()
     {
-        JumpingGameEventSystem.LevelReset -= ResetCollisions;
+        GameEventSystem.LevelReset -= ResetCollisions;
     }
 
 }

@@ -28,14 +28,14 @@ public class PlatformerFinishLine : MonoBehaviour {
         
         didIWin = true ? (scoreboard.currentScore > scoreboard.scoreToWin) : false;
 
-        JumpingGameEventSystem.OnEndLevel(didIWin);
+        GameEventSystem.OnEndLevel(didIWin);
 
             yield return new WaitForSeconds(3f);
 
             if (didIWin == true)
             {
                 Scene platformScene = SceneManager.GetActiveScene();
-                CastleEventSystem.OnPlatformFinished();
+                //CastleEventSystem.OnPlatformFinished();
 
                 try { SceneManager.SetActiveScene(SceneManager.GetSceneByName("01_5_Castle_Interior")); }
                 catch (System.ArgumentException)
@@ -47,7 +47,7 @@ public class PlatformerFinishLine : MonoBehaviour {
             }
             else
             {
-                JumpingGameEventSystem.OnLevelReset();
+                GameEventSystem.OnLevelReset();
             }
         
         }

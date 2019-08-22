@@ -7,11 +7,11 @@ public class JumpingGameCollectable : MonoBehaviour {
     [SerializeField]
     public int Value;
 
-    private CollectGold gold;
+    private CollectAcorn acorn;
 
     void Start()
     {
-        gold = FindObjectOfType<CollectGold>();
+        acorn = FindObjectOfType<CollectAcorn>();
     }
 
     public void OnCollected()
@@ -25,7 +25,7 @@ public class JumpingGameCollectable : MonoBehaviour {
         myMesh.enabled = false;
         myCollider.enabled = false;
 
-        gold.CollectableAnimation(transform.position);
+        acorn.CollectableAnimation(transform.position);
     }
     
 }

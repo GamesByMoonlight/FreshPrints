@@ -37,19 +37,19 @@ public class AutoPlayerRun : MonoBehaviour {
         currentSpeed = 0;
     }
 
-    #region JumpingGameEventSystem subscription
+    #region GameEventSystem subscription
     void OnEnable()
     {
-        JumpingGameEventSystem.LevelReset += ResetPosition;
-        JumpingGameEventSystem.BeginPlay += BeginMoving;
-        JumpingGameEventSystem.PlayerFail += StopMoving;
+        GameEventSystem.LevelReset += ResetPosition;
+        GameEventSystem.BeginPlay += BeginMoving;
+        GameEventSystem.PlayerFail += StopMoving;
     }
 
     void OnDisable()
     {
-        JumpingGameEventSystem.LevelReset -= ResetPosition;
-        JumpingGameEventSystem.BeginPlay -= BeginMoving;
-        JumpingGameEventSystem.PlayerFail -= StopMoving;
+        GameEventSystem.LevelReset -= ResetPosition;
+        GameEventSystem.BeginPlay -= BeginMoving;
+        GameEventSystem.PlayerFail -= StopMoving;
     }
     #endregion  
 }

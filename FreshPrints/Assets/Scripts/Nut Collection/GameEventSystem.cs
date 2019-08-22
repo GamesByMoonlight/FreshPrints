@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpingGameEventSystem : MonoBehaviour
+public class GameEventSystem : MonoBehaviour
 {
     public delegate void AddScoreEventHandler(int value);
     public static event AddScoreEventHandler ScoreAdded;

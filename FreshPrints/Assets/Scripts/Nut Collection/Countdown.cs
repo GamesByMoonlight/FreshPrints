@@ -35,17 +35,17 @@ public class Countdown : MonoBehaviour {
             timeLeft -= Time.deltaTime;
         }
 
-        JumpingGameEventSystem.OnBeginPlay();
+        GameEventSystem.OnBeginPlay();
         countdownText.text = "Go!";
     }
 
     void OnEnable()
     {
-        JumpingGameEventSystem.LevelReset += StartCountdown;
+        GameEventSystem.LevelReset += StartCountdown;
     }
 
     void OnDisable()
     {
-        JumpingGameEventSystem.LevelReset -= StartCountdown;
+        GameEventSystem.LevelReset -= StartCountdown;
     }
 }
