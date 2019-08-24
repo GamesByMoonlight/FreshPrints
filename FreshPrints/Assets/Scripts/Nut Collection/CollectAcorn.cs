@@ -6,7 +6,6 @@ public class CollectAcorn : MonoBehaviour
 {
     public void CollectableAnimation(Vector3 location)
     {
-        // Some anim
         Debug.Log("Add animation logic in CollectAcorn.CollectableAnimation");
     }
 }
