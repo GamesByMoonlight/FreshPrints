@@ -1,7 +1,22 @@
 fileFormatVersion: 2
-guid: f878a0d543ed72e498a471fdb31404e1
+guid: 2093ea950ae88f0438de33d47df0e3d8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 814878369691159022
+    second: squirrelSprite_0
+  - first:
+      213: 6141360928627274990
+    second: squirrelSprite_1
+  - first:
+      213: -4587087772313753878
+    second: squirrelSprite_2
+  - first:
+      213: 1654766061108627543
+    second: squirrelSprite_3
+  - first:
+      213: -4521132620683515632
+    second: squirrelSprite_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -156,11 +171,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: squirrelSprite_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 832
+        width: 182
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ce66bf8cdd8aa4a970e4beaaeb4871
+      internalID: 814878369691159022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squirrelSprite_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 614
+        width: 288
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414708b9ae71e0e4192f086e3582ddd0
+      internalID: 6141360928627274990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squirrelSprite_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402
+        width: 293
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410a2613a1471f548b596cb6bb95a887
+      internalID: -4587087772313753878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squirrelSprite_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 293
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6891793a209be044adfb2f4d5b3a3ff
+      internalID: 1654766061108627543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squirrelSprite_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 290
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd09bb919955b44486151e39457c612
+      internalID: -4521132620683515632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2db06c999fd83bc4fb009cbe953beecf
     internalID: 0
     vertices: []
     indices: 
