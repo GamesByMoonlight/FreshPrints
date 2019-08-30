@@ -17,11 +17,8 @@ public static class SaveSystem
 
         formatter.Serialize(stream, data);
         stream.Close();
-        
-
-
+       
     }
-
 
     public static PlayerData LoadPlayer()
     {
@@ -41,14 +38,79 @@ public static class SaveSystem
         {
             Debug.LogError("Save file not found in " + path);
             return null;
-
         }
+    }
 
-       
-
+    public static void SaveLevelData( Player player)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/level.ftw";
+        FileStream stream = new FileStream(path, FileMode.Create);
+        LevelData data = new LevelData(player);
+        formatter.Serialize(stream, data);
+        stream.Close();
     }
 
 
+    public static LevelData LoadLevels()
+    {
+        Debug.Log("LoadLevels");
 
+        string path = Application.persistentDataPath + "/level.ftw";
+        if(File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            LevelData data = formatter.Deserialize(stream) as LevelData;
+            stream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.LogError("save file not found in " + path);
+            return null;
+        }
 
+    }
+
+    public static void SaveLevelData(LevelData levelData)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/level.ftw";
+        FileStream stream = new FileStream(path, FileMode.Create);
+        LevelData data = new LevelData();
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static void SaveLevelOptions(LevelOptions levelOptions)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/levelOptions.ftw";
+        FileStream stream = new FileStream(path, FileMode.Create);
+        LevelData data = new LevelData(levelOptions);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static LevelData LoadLevelOptions()
+    {
+        Debug.Log("LoadLevelOptions");
+
+        string path = Application.persistentDataPath + "/levelOptions.ftw";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            LevelData data = formatter.Deserialize(stream) as LevelData;
+            stream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.LogError("save file not found in " + path);
+            return null;
+        }
+
+    }
 }

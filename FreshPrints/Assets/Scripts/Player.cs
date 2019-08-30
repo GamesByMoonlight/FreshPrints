@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public int level = 3;
+    public int level = 1;
     public int health = 100;
+    public int nuts = 4;
 
     // will also save the player postion... tranform...j
 
@@ -44,7 +45,20 @@ public class Player : MonoBehaviour
 
     }
 
+    public void SaveLevel()
+    {
+        SaveSystem.SaveLevelData(this);
 
+    }
+
+    public void LoadLevelData()
+    {
+        LevelData data = SaveSystem.LoadLevels();
+
+        nuts = data.NutsCollected[level];
+
+
+    }
 
 
 
