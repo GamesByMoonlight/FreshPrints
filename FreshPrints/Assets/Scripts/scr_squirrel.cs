@@ -22,7 +22,7 @@ public class scr_squirrel : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            myRigidBody.AddForce(new Vector2(0,1), ForceMode2D.Force);
+            myRigidBody.AddForce(new Vector2(0,3), ForceMode2D.Force);
             ChangeColor();
         }
         void ChangeColor()
@@ -33,6 +33,12 @@ public class scr_squirrel : MonoBehaviour
                 myColor=Color.black;
             mySpriteRenderer.color = myColor;
         }
+        PlayerMovement();
+    }
 
+    void PlayerMovement()
+    {
+        Vector3 motion = new Vector3(1.5f,0,0);
+        myRigidBody.velocity = motion;
     }
 }
