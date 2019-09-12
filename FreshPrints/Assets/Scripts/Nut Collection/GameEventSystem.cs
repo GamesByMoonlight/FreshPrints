@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class GameEventSystem : MonoBehaviour
 {
+    private GameEventSystem instance;
+
+    GameEventSystem()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+        
+    }
+
+
+
     public delegate void AddScoreEventHandler(int value);
     public static event AddScoreEventHandler ScoreAdded;
 
@@ -23,6 +40,7 @@ public class GameEventSystem : MonoBehaviour
     void Start()
     {
         OnLevelReset();
+        DontDestroyOnLoad(this);
     }
 
     public static void OnScoreAdded(int score)
