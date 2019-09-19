@@ -17,7 +17,7 @@ public class CollectablesManager : MonoBehaviour
         UI = FindObjectOfType<LevelUI>();
 
         Acorns = FindObjectsOfType<JumpingGameCollectable>();
-        Acorns.OrderBy(x => x.transform.position.x);
+        Acorns = Acorns.OrderBy(x => x.transform.position.x).ToArray();
     }
 
     public void AcornCollected(JumpingGameCollectable collectedAcorn)
