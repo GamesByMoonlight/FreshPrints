@@ -16,12 +16,12 @@ public class GameController2D : MonoBehaviour {
     bool areJumping;
     bool readInput;
 
-    Rigidbody myBody;
+    Rigidbody2D myBody;
     Animator myAnim;
 
     void Awake()
     {
-        myBody = GetComponent<Rigidbody>();
+        myBody = GetComponent<Rigidbody2D>();
         myAnim = GetComponentInChildren<Animator>();
 
         JumpStepsRemaining = PossibleJumpSteps;
@@ -48,7 +48,7 @@ public class GameController2D : MonoBehaviour {
                     myAnim.SetTrigger("Jump");
 
                 areJumping = true;
-                myBody.velocity += Vector3.up * JumpPower * Mathf.Min(JumpStepsRemaining, 1);
+                myBody.velocity += Vector2.up * JumpPower * Mathf.Min(JumpStepsRemaining, 1);
                 JumpStepsRemaining = Mathf.Max(JumpStepsRemaining - 1, 0);
                 myAnim.SetBool("Airborne", true);
             }
