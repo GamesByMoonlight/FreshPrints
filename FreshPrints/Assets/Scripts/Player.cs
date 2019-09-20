@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
 
     public void SaveLevel()
     {
-        SaveSystem.SaveLevelData(this);
+     //   SaveSystem.SaveLevelData(this);
 
     }
 

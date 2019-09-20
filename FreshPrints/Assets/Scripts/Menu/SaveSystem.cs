@@ -41,20 +41,80 @@ public static class SaveSystem
         }
     }
 
-    public static void SaveLevelData( Player player)
+    public static void SaveLevelData( int level, int nut)
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/level.ftw";
-        FileStream stream = new FileStream(path, FileMode.Create);
-        LevelData data = new LevelData(player);
-        formatter.Serialize(stream, data);
-        stream.Close();
+        level--;   /// always remeber zero indexed
+
+        int[] savedNuts = GetNuts();
+
+
+        if( nut > savedNuts[level] )
+        {
+            savedNuts[level] = nut;
+
+            BinaryFormatter formatter = new BinaryFormatter();
+            string path = Application.persistentDataPath + "/nuts.ftw";
+            FileStream stream = new FileStream(path, FileMode.Create);
+
+            // PlayerData data = new PlayerData(player);
+            //formatter.Serialize(stream, data);
+
+            formatter.Serialize(stream, savedNuts);
+            stream.Close();
+
+        }
+
+
     }
 
+    public static int[] GetNuts()
+    {
+        int[] nuts = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+        string path = Application.persistentDataPath + "/nuts.ftw";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            nuts = formatter.Deserialize(stream) as int[];
+            stream.Close();
+
+            return nuts;
+
+        }
+        else
+        {
+        //    Debug.LogError("Save file not found in " + path);
+            return nuts;
+        }
+
+
+    }
+
+    public static int GetNutByLevel(int level)
+    {
+        level--; // zero indexed;
+        int[] savedNuts = new int[10];
+
+        savedNuts = GetNuts();
+        return savedNuts[level];
+
+    }
 
     public static LevelData LoadLevels()
     {
         Debug.Log("LoadLevels");
+
+        int totalLevels = 10;
+        int[] nuts = new int[totalLevels];
+
+
+        for (int i = 0; i < totalLevels ; i++)
+        {
+            nuts[i] = 0;
+        }
+
 
         string path = Application.persistentDataPath + "/level.ftw";
         if(File.Exists(path))
@@ -82,6 +142,23 @@ public static class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static void SaveLevelOptions(LevelOptions levelOptions)
     {
