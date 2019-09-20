@@ -11,7 +11,6 @@ public class PlayerData
     public int health;
     public float[] position;
 
-    public int[] NutsCount;
 
 
     public PlayerData(Player player )
@@ -26,21 +25,9 @@ public class PlayerData
     }
 
 
-    public void UpdateNuts(int level, int nuts)
-    {
-        if (level < 1)
-            return;
-        level--;
-
-        NutsCount[level] = nuts;
-
-
-    }
-
-
-
-
-
-
 
 }
+
+
+
+

@@ -26,7 +26,18 @@ public class MainMenu : MonoBehaviour
     {
 //        Application.Quit();
 
-        Debug.Log("Quit Game");
+        //Debug.Log("Quit Game");
+
+        int[] savedNuts = new int[10];
+        savedNuts = SaveSystem.GetNuts();
+
+        SaveSystem.SaveLevelData(1, 1);
+        SaveSystem.SaveLevelData(2, 2);
+
+        savedNuts = SaveSystem.GetNuts();
+
+
+
 
     }
 
