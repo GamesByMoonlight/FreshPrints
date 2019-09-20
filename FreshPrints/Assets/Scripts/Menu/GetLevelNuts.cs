@@ -14,7 +14,6 @@ public class GetLevelNuts : MonoBehaviour
     {
         nut =SaveSystem.GetNutByLevel(LevelNumber);
         TextNut.text = nut.ToString();
-
     }
 
     // Update is called once per frame
