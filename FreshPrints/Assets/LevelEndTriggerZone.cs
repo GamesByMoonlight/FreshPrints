@@ -34,6 +34,8 @@ public class LevelEndTriggerZone : MonoBehaviour
         {
             SaveSystem.SaveLevelData(levelNumber, collectablesManager.CollectedAcorns);
             GameEventSystem.OnEndLevel(levelNumber, collectablesManager.CollectedAcorns);
+
+            SceneManager.LoadScene("LevelSelectionScreen_JMiller");
         }
     }
 
