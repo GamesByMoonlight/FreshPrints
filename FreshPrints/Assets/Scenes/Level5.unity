@@ -405,7 +405,7 @@ PrefabInstance:
     - target: {fileID: 3403365579161338435, guid: 5913120687fe2e0438fd71e52fed6720,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.5
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 3403365579161338435, guid: 5913120687fe2e0438fd71e52fed6720,
         type: 3}
@@ -431,6 +431,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279851924898616981, guid: 5913120687fe2e0438fd71e52fed6720,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279851924898616981, guid: 5913120687fe2e0438fd71e52fed6720,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279851924898616981, guid: 5913120687fe2e0438fd71e52fed6720,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279851924898616981, guid: 5913120687fe2e0438fd71e52fed6720,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279851924898616981, guid: 5913120687fe2e0438fd71e52fed6720,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5913120687fe2e0438fd71e52fed6720, type: 3}
@@ -640,7 +665,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c737b9ba42284134bb8d2ac56b4761f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -677,8 +702,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778580682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 29.925, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -1.04, z: 0}
+  m_LocalScale: {x: 39.135914, y: 3.2730045, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5

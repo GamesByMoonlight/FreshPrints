@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class GameController2D : MonoBehaviour {
 
-    [SerializeField]
-    float JumpPower;
-    [SerializeField]
-    int PossibleJumpSteps;
-
+    
     int LandingBuffer;
-    int JumpStepsRemaining;
 
     bool canJump;
     bool areJumping;
@@ -23,8 +18,6 @@ public class GameController2D : MonoBehaviour {
     {
         myBody = GetComponent<Rigidbody2D>();
         myAnim = GetComponentInChildren<Animator>();
-
-        JumpStepsRemaining = PossibleJumpSteps;
         canJump = false;
         areJumping = false;
         readInput = false;
@@ -37,19 +30,12 @@ public class GameController2D : MonoBehaviour {
 
         if (readInput)
         {
-            if (Input.GetButtonUp("Jump"))
-            {
-                JumpStepsRemaining = 0;
-            }
-
             if (Input.GetButton("Jump") && LandingBuffer == 2 && (canJump | areJumping))
             {
                 if (canJump)
                     myAnim.SetTrigger("Jump");
 
                 areJumping = true;
-                myBody.velocity += Vector2.up * JumpPower * Mathf.Min(JumpStepsRemaining, 1);
-                JumpStepsRemaining = Mathf.Max(JumpStepsRemaining - 1, 0);
                 myAnim.SetBool("Airborne", true);
             }
 
@@ -60,17 +46,6 @@ public class GameController2D : MonoBehaviour {
 
     }
 
-
-    void ResetJump()
-    {
-        myAnim.ResetTrigger("Jump");
-        myAnim.SetBool("Airborne", false);
-
-        areJumping = false;
-        canJump = true;
-        JumpStepsRemaining = PossibleJumpSteps;
-        LandingBuffer = 0;
-    }
 
     void CancelJump()
     {
@@ -98,47 +73,23 @@ public class GameController2D : MonoBehaviour {
         myAnim.Play("Running");
     }
 
-    void AnimatePlayerResults(bool didIWin)
+    void EndLevel(int level, int acornCount)
     {
-        readInput = false;
-
-        StartCoroutine(FinalAnimation(didIWin));
-    }
-
-    IEnumerator FinalAnimation(bool didIWin)
-    {
-        yield return new WaitForSeconds(1f);
-
-        GameEventSystem.OnPlayerFail();  // This causes the player to stop moving
-
-        if (didIWin)
-        {
-            myAnim.SetTrigger("Victory");
-        }
-        else
-        {
-            myAnim.SetTrigger("Defeat");
-        }
+        
     }
 
     void OnEnable()
     {
-        JumpResetCollider.GroundTouched += ResetJump;
-        JumpResetCollider.CantJump += CancelJump;
         GameEventSystem.BeginPlay += AllowInput;
-        GameEventSystem.PlayerFail += PauseInput;
-        GameEventSystem.EndLevel += AnimatePlayerResults;
+        GameEventSystem.EndLevel += EndLevel;
         GameEventSystem.LevelReset += ResetPlayer;
         
     }
 
     void OnDisable()
     {
-        JumpResetCollider.GroundTouched -= ResetJump;
-        JumpResetCollider.CantJump -= CancelJump;
         GameEventSystem.BeginPlay -= AllowInput;
-        GameEventSystem.PlayerFail -= PauseInput;
-        GameEventSystem.EndLevel -= AnimatePlayerResults;
+        GameEventSystem.EndLevel -= EndLevel;
         GameEventSystem.LevelReset -= ResetPlayer;
     }
 }
