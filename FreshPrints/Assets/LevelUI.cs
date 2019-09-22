@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
-    Image[] acornUIImages;
+    RawImage[] acornUIImages;
     int collectedAcornCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        acornUIImages = GetComponentsInChildren<Image>();
+        acornUIImages = GetComponentsInChildren<RawImage>();
 
         acornUIImages.OrderBy(img => img.transform.position.x).ToArray();
 
@@ -21,7 +21,7 @@ public class LevelUI : MonoBehaviour
 
     private void ClearCollected()
     {
-        foreach (Image image in acornUIImages)
+        foreach (var image in acornUIImages)
         {
             image.enabled = false;
         }
