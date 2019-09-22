@@ -15,18 +15,44 @@ public class JumpingGameCollectable : MonoBehaviour {
 
     public void OnCollected()
     {
-        SpriteRenderer mySprite;
-        CircleCollider2D myCollider;
-
-        mySprite = GetComponent<SpriteRenderer>();
-        myCollider = GetComponent<CircleCollider2D>();
-
-        mySprite.enabled = false;
-        myCollider.enabled = false;
-
-        collectablesManager.AcornCollected(this);
+        RemoveAcorn();
 
         if (acorn)
             acorn.CollectableAnimation(transform.position);
+    }
+
+    private void RemoveAcorn()
+    {
+        CircleCollider2D myCollider;
+
+        myCollider = GetComponent<CircleCollider2D>();
+        myCollider.enabled = false;
+
+        MeshRenderer[] meshes;
+        meshes = GetComponentsInChildren<MeshRenderer>();
+
+        foreach (var mesh in meshes)
+        {
+            mesh.enabled = false;
+        }
+
+        collectablesManager.AcornCollected(this);
+
+    }
+
+    private void AddAcorn()
+    {
+        CircleCollider2D myCollider;
+
+        myCollider = GetComponent<CircleCollider2D>();
+        myCollider.enabled = true;
+
+        MeshRenderer[] meshes;
+        meshes = GetComponentsInChildren<MeshRenderer>();
+
+        foreach (var mesh in meshes)
+        {
+            mesh.enabled = true;
+        }
     }
 }
