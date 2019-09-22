@@ -43,8 +43,6 @@ public class PlatformerPlayerCollisions : MonoBehaviour {
 
     IEnumerator PlayerDie()
     {
-        GameEventSystem.OnPlayerFail();  // Stops inputs, etc
-        
         // Some sort of player death animation
         yield return new WaitForSeconds(2);  // Replace "2" with length of player death animation/sfx
 

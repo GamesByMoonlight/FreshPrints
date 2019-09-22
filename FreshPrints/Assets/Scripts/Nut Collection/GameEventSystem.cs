@@ -15,12 +15,9 @@ public class GameEventSystem : MonoBehaviour
         else
         {
             Destroy(this);
-        }
-        
+        }    
     }
-
-
-
+        
     public delegate void AddScoreEventHandler(int value);
     public static event AddScoreEventHandler ScoreAdded;
 
@@ -30,10 +27,7 @@ public class GameEventSystem : MonoBehaviour
     public delegate void BeginPlayEventHandler();
     public static event BeginPlayEventHandler BeginPlay;
 
-    public delegate void PlayerFailureEventHandler();
-    public static event BeginPlayEventHandler PlayerFail;
-
-    public delegate void EndLevelEventHandler(bool didIWin);
+    public delegate void EndLevelEventHandler(int level, int acornCount);
     public static event EndLevelEventHandler EndLevel;
 
 
@@ -67,19 +61,12 @@ public class GameEventSystem : MonoBehaviour
         }
     }
 
-    public static void OnPlayerFail()
+    public static void OnEndLevel(int level, int acornCount)
     {
-        if(PlayerFail != null)
+        // As of 9/22/2019 nothing is subscribed to this event, but leaving it in place just in case
+        if (EndLevel != null)
         {
-            PlayerFail();
-        }
-    }
-
-    public static void OnEndLevel(bool didIWin)
-    {
-        if(EndLevel != null)
-        {
-            EndLevel(didIWin);
+            EndLevel(level, acornCount);
         }
     }
 }

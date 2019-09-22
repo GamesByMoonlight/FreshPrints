@@ -41,7 +41,7 @@ public static class SaveSystem
         }
     }
 
-    public static void SaveLevelData( int level, int nut)
+    public static void SaveLevelData(int level, int nut)
     {
         level--;   /// always remeber zero indexed
 
