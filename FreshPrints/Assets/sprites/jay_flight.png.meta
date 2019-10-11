@@ -1,17 +1,39 @@
 fileFormatVersion: 2
 guid: 555a4e9b065e6aa4ebb1cb72da510424
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: jay_flight_0
-    21300002: jay_flight_1
-    21300004: jay_flight_2
-    21300006: jay_flight_3
-    21300008: jay_flight_4
-    21300010: jay_flight_5
-    21300012: jay_flight_6
-    21300014: jay_flight_7
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: jay_flight_0
+  - first:
+      213: 21300002
+    second: jay_flight_1
+  - first:
+      213: 21300004
+    second: jay_flight_2
+  - first:
+      213: 21300006
+    second: jay_flight_3
+  - first:
+      213: 21300008
+    second: jay_flight_4
+  - first:
+      213: 21300010
+    second: jay_flight_5
+  - first:
+      213: 21300012
+    second: jay_flight_6
+  - first:
+      213: 21300014
+    second: jay_flight_7
+  - first:
+      213: -4966469063170748960
+    second: jay_flight_8
+  - first:
+      213: 3093788944980720658
+    second: jay_flight_9
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -66,7 +88,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -77,7 +99,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -88,7 +111,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -99,7 +123,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,7 +135,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -121,6 +147,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -132,14 +159,15 @@ TextureImporter:
         y: 727
         width: 308
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.19505878, y: 0.4989569}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 4a3a5ed4659f011408fe4c6a5d8970c1
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -152,14 +180,15 @@ TextureImporter:
         y: 727
         width: 305
         height: 209
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.19184451, y: 0.54770935}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 08a4ee4e858817a42b16ecae4857c13b
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -172,14 +201,15 @@ TextureImporter:
         y: 719
         width: 307
         height: 191
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.18347764, y: 0.81555754}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 6b1e8f05e1a0efc42a90673374cfa8f2
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -192,14 +222,15 @@ TextureImporter:
         y: 401
         width: 303
         height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.18741812, y: 0.8303798}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: bc81ff931771a1f498da0b8794f8f0cf
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -212,14 +243,15 @@ TextureImporter:
         y: 372
         width: 306
         height: 261
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.19852214, y: 0.84874415}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: a1e56755ef77a4441958580afbbe39c8
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -232,14 +264,15 @@ TextureImporter:
         y: 368
         width: 306
         height: 241
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.19048275, y: 0.83175063}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 7367ff92a3c22f141ad3ee81b407a10f
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -248,18 +281,19 @@ TextureImporter:
       name: jay_flight_6
       rect:
         serializedVersion: 2
-        x: 22
-        y: 100
+        x: 28
+        y: 101
         width: 306
         height: 193
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.17440382, y: 0.80591404}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 9c514306705f13843922687b07e55f02
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -272,6 +306,48 @@ TextureImporter:
         y: 92
         width: 308
         height: 208
+      alignment: 9
+      pivot: {x: 0.20047978, y: 0.5236543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba36c83d90c08046b1ad86d92bca3c5
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jay_flight_8
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 271
+        width: 364
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a971c80d08d2de4a94a176e11347837
+      internalID: -4966469063170748960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jay_flight_9
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 292
+        width: 253
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,7 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bba36c83d90c08046b1ad86d92bca3c5
+      spriteID: 3fc5a38fd15e7e448a62e83d198cbd9c
+      internalID: 3093788944980720658
       vertices: []
       indices: 
       edges: []
@@ -288,10 +365,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 18aab47fda6635a45991024b039033c4
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
