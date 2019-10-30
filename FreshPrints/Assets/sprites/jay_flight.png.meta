@@ -155,18 +155,18 @@ TextureImporter:
       name: jay_flight_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 13
         y: 727
-        width: 308
-        height: 233
-      alignment: 9
-      pivot: {x: 0.19505878, y: 0.4989569}
+        width: 305
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3a5ed4659f011408fe4c6a5d8970c1
+      spriteID: 7ebb702e2000eb74c890164878416ffd
       internalID: 21300000
       vertices: []
       indices: 
@@ -179,15 +179,15 @@ TextureImporter:
         x: 324
         y: 727
         width: 305
-        height: 209
-      alignment: 9
-      pivot: {x: 0.19184451, y: 0.54770935}
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08a4ee4e858817a42b16ecae4857c13b
+      spriteID: 6b24744d7f205cb4ea316856328cbbb8
       internalID: 21300002
       vertices: []
       indices: 
@@ -197,18 +197,18 @@ TextureImporter:
       name: jay_flight_2
       rect:
         serializedVersion: 2
-        x: 677
+        x: 678
         y: 719
-        width: 307
-        height: 191
-      alignment: 9
-      pivot: {x: 0.18347764, y: 0.81555754}
+        width: 306
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b1e8f05e1a0efc42a90673374cfa8f2
+      spriteID: b71b9f82677891a42aa83144f17cd3de
       internalID: 21300004
       vertices: []
       indices: 
@@ -221,15 +221,15 @@ TextureImporter:
         x: 0
         y: 401
         width: 303
-        height: 242
-      alignment: 9
-      pivot: {x: 0.18741812, y: 0.8303798}
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc81ff931771a1f498da0b8794f8f0cf
+      spriteID: ea2197d06ad2d544f97aed621b5719bd
       internalID: 21300006
       vertices: []
       indices: 
@@ -240,17 +240,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 370
-        y: 372
-        width: 306
-        height: 261
-      alignment: 9
-      pivot: {x: 0.19852214, y: 0.84874415}
+        y: 374
+        width: 305
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1e56755ef77a4441958580afbbe39c8
+      spriteID: ec71689b195512d499a723a1f01333bd
       internalID: 21300008
       vertices: []
       indices: 
@@ -260,18 +260,18 @@ TextureImporter:
       name: jay_flight_5
       rect:
         serializedVersion: 2
-        x: 691
+        x: 690
         y: 368
-        width: 306
+        width: 307
         height: 241
-      alignment: 9
-      pivot: {x: 0.19048275, y: 0.83175063}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7367ff92a3c22f141ad3ee81b407a10f
+      spriteID: 3c703648b1c1d0640b614595e12f7e8e
       internalID: 21300010
       vertices: []
       indices: 
@@ -281,18 +281,18 @@ TextureImporter:
       name: jay_flight_6
       rect:
         serializedVersion: 2
-        x: 28
-        y: 101
+        x: 22
+        y: 102
         width: 306
-        height: 193
-      alignment: 9
-      pivot: {x: 0.17440382, y: 0.80591404}
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c514306705f13843922687b07e55f02
+      spriteID: 5bf812c2791ec5145bb7d8dcde9b009c
       internalID: 21300012
       vertices: []
       indices: 
@@ -302,52 +302,10 @@ TextureImporter:
       name: jay_flight_7
       rect:
         serializedVersion: 2
-        x: 384
+        x: 385
         y: 92
-        width: 308
-        height: 208
-      alignment: 9
-      pivot: {x: 0.20047978, y: 0.5236543}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bba36c83d90c08046b1ad86d92bca3c5
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jay_flight_8
-      rect:
-        serializedVersion: 2
-        x: 359
-        y: 271
-        width: 364
-        height: 228
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a971c80d08d2de4a94a176e11347837
-      internalID: -4966469063170748960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jay_flight_9
-      rect:
-        serializedVersion: 2
-        x: 522
-        y: 292
-        width: 253
-        height: 47
+        width: 305
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fc5a38fd15e7e448a62e83d198cbd9c
-      internalID: 3093788944980720658
+      spriteID: 11fa970743fd0ce44a19e855e48e4ff3
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
