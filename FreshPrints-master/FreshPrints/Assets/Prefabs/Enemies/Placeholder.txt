@@ -1,3 +1,0 @@
-Creating a folder for github tracking.
-
-This file can be safely deleted when other files present in this folder.
