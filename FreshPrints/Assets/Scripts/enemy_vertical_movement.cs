@@ -5,9 +5,9 @@ using UnityEngine;
 public class enemy_vertical_movement : MonoBehaviour
 {
     //movement variables
-    public float speed;//Edit this variable to adjust enemy speed. 
+    private float speed = 2.5f;//Edit this variable to adjust enemy speed. 
     private Rigidbody2D theRB;
-    public bool moveUp;
+    private bool moveUp;
 
     void Start()
     {
@@ -23,20 +23,20 @@ public class enemy_vertical_movement : MonoBehaviour
         if(!moveUp)
         {
             transform.Translate(-dir.normalized * Time.deltaTime * speed);
-//            transform.localScale = new Vector3(0.5f, .5f, .5f);
+       transform.localScale = new Vector3(0.5f, .5f, .5f);
             
         }
         else
         {
             transform.Translate(dir.normalized * Time.deltaTime * speed);
-            //transform.localScale = new Vector3(-.5f, .5f, .5f);
+            transform.localScale = new Vector3(.5f, .5f, .5f);
 
         }
     }
 
     void OnTriggerEnter2D(Collider2D trig)
     {
-        if(trig.gameObject.CompareTag("Turn"))
+        if(trig.gameObject.CompareTag("turn"))
         {
             if(!moveUp)
             {

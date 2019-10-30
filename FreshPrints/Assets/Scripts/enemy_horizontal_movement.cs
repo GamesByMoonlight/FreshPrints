@@ -5,9 +5,9 @@ using UnityEngine;
 public class enemy_horizontal_movement : MonoBehaviour
 {
     //movement variables
-    public float speed;
+    private float speed =2.5f;
     private Rigidbody2D theRB;
-    public bool moveRight;
+    private bool moveRight;
 
     void Start()
     {
@@ -23,20 +23,20 @@ public class enemy_horizontal_movement : MonoBehaviour
         if(!moveRight)
         {
             transform.Translate(-dir.normalized * Time.deltaTime * speed);
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(.5f, .5f, .5f);
             
         }
         else
         {
             transform.Translate(dir.normalized * Time.deltaTime * speed);
-           transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+           transform.localScale = new Vector3(-.5f, .5f, .5f);
 
         }
     }
 
     void OnTriggerEnter2D(Collider2D trig)
     {
-        if(trig.gameObject.CompareTag("Turn"))
+        if(trig.gameObject.CompareTag("turn"))
         {
             if(!moveRight)
             {
